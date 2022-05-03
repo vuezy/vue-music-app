@@ -1,30 +1,51 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <AppHeader />
+  <router-view
+    :chooseThisSong="chooseThisSong"
+    :songHasChanged="songHasChanged"
+    :songHasStarted="songHasStarted"
+    :song="song"
+    :audio="audio"
+  />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import AppHeader from './components/AppHeader.vue'
 
-nav {
-  padding: 30px;
+export default {
+  name: 'App',
+  data() {
+    return {
+      song: {},
+      audio: new Audio(),
+      songHasChanged: false
+    }
+  },
+  components: {
+    AppHeader
+  },
+  methods: {
+    chooseThisSong(chosenSong) {
+      this.songHasChanged = true
+      this.song = chosenSong
+      this.audio.src = `/assets/songs/${this.song.fileName}.mp3`
+    },
+    songHasStarted() {
+      this.songHasChanged = false
+      document.title = this.song.fileName
+    }
+  },
+  created() {
+    this.audio.preload = 'metadata'
+    this.audio.onloadedmetadata = () => {
+      this.$router.push('/')
+    }
+    this.$router.beforeEach((to, from) => {
+      if (to.meta.reset && Object.keys(this.song).length > 0) {
+        this.songHasChanged = true
+        this.audio.currentTime = 0
+      }
+    })
+  }
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

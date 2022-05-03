@@ -1,4 +1,5 @@
-# vue-music-app
+# Music App
+This app is built for practice purposes.
 
 ## Project setup
 ```

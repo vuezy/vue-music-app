@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to bottom, rgb(231, 119, 138), rgb(227, 98, 120), rgb(231, 119, 138));
+  font-family: "Comic Sans MS", sans;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom, rgba(216, 70, 94, 0.8) 80%, rgb(227, 98, 120));
+}
+
+header a {
+  text-decoration: none;
+  line-height: 4rem;
+  color: white;
+}
+
+header a:first-of-type {
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+header a:last-of-type {
+  transition: background-color 0.5s;
+}
+
+header a:last-of-type:hover {
+  background-color: rgb(231, 119, 138);
+}
+
+/* HomeView */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  color: rgba(37, 35, 35, 0.8);
+}
+
+.song-img {
+  width: 30rem;
+  height: 20rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: rgb(198, 133, 150);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 8px 10px rgba(167, 34, 56, 0.8);
+}
+
+.timeline {
+  margin: 2.5rem auto 0.7rem;
+  text-align: center;
+}
+
+.timeline span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.timeline input {
+  width: 28rem;
+  margin: 0 1rem;
+}
+
+.controller-btns {
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.controller-btns button {
+  margin: 0 1rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.controller-btns button:hover {
+  color: white;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.volume i:first-of-type {
+  margin-right: 1.2rem;
+  font-size: 1.5rem;
+}
+
+.volume i:hover {
+  color: white;
+}
+
+.volume input {
+  margin: 0 0.5rem;
+}
+
+/* ListView */
+.row {
+  padding: 1rem;
+  margin: 2rem 10rem;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(227, 216, 216);
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.song span {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.song span:first-of-type {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.song span:last-of-type {
+  font-size: 1.5rem;
+}
+
+.thumbnail {
+  display: inline-block;
+  width: 8rem;
+  height: 5rem;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center;
+}
+
+.row button {
+  border: none;
+  font-size: 3rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.row button:hover {
+  color: rgb(27, 26, 26);
+}

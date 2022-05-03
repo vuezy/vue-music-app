@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Safe And Sound",
+    "artist": "Different Heaven",
+    "fileName": "Different Heaven - Safe And Sound",
+    "colorCode": "yellow"
+  },
+  {
+    "id": 2,
+    "title": "Fly",
+    "artist": "Fransis Derelle (feat. Parker Pohill)",
+    "fileName": "Fransis Derelle - Fly (feat. Parker Pohill)",
+    "colorCode": "green"
+  },
+  {
+    "id": 3,
+    "title": "Dreams",
+    "artist": "Lost Sky",
+    "fileName": "Lost Sky - Dreams",
+    "colorCode": "black"
+  },
+  {
+    "id": 4,
+    "title": "Love U",
+    "artist": "Razihel",
+    "fileName": "Razihel - Love U",
+    "colorCode": "white"
+  },
+  {
+    "id": 5,
+    "title": "Light It Up",
+    "artist": "Robin Hustin x TobiMorrow (feat. Jex)",
+    "fileName": "Robin Hustin x TobiMorrow - Light It Up (feat. Jex)",
+    "colorCode": "purple"
+  }
+]
